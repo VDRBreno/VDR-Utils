@@ -1,0 +1,1 @@
+ls -File -Filter *.png | % { $file = "$($_)"; ffmpeg -i $file "./$($file.SubString(0,$file.Length-4)).webp" }

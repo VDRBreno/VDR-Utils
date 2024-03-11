@@ -1,0 +1,1 @@
+Códigos úteis que não quero jogar fora.
