@@ -1,6 +1,6 @@
 # convert-image
 
-Script para criar menu no Windows om opções para converter imagens.
+Script para criar menu no Windows com opções para converter imagens.
 
 **:warning: NECESSÁRIO TER FFMPEG NA MÁQUINA :warning:**
 
