@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\Windows Terminal]
+@="Abrir a pasta no Terminal"
+"Icon"="C:\\VDR-Utils\\Windows_Global_Scripts\\windows-terminal-open-by-background-shell-folder\\icon\\Square44x44Logo.scale-100.ico"
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\Windows Terminal\command]
+@="\"wt.exe\" -d ."
