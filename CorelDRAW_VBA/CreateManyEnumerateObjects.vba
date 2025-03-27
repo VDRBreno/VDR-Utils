@@ -112,7 +112,7 @@ Sub CreateManyEnumerateObjects()
         End If
     Next i
     
-    Text.Text.Story = FinalNumber
+    Text.Text.Story = Int(FinalNumber) + 1
 
 End Sub
 
@@ -236,6 +236,6 @@ Sub CreateManyEnumerateObjectsDuplicated()
         Next j
     Next i
     
-    Text.Text.Story = FinalNumber
+    Text.Text.Story = Int(FinalNumber) + 1
 
 End Sub
