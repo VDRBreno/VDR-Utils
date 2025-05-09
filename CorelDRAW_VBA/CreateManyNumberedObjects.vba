@@ -82,6 +82,12 @@ Sub CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal TargetGap
         
         Dim DuplicatedShapes As Shape
         Set DuplicatedShapes = ActiveSelection.Duplicate
+        
+        'Após a primeira execução do loop, os objetos duplicados são agrupados, necessário desagrupar antes
+        If Not i = CurrentNumber Then
+            Call DuplicatedShapes.Ungroup
+        End If
+        
         DuplicatedShapes.PositionX = PositionX
         DuplicatedShapes.PositionY = PositionY
         
@@ -92,6 +98,10 @@ Sub CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal TargetGap
             Set NewText = DuplicatedShapes.Shapes(2)
         End If
         NewText.Text.Story = i
+        
+        Dim DuplicatedGroup As Shape
+        Set DuplicatedGroup = DuplicatedShapes.Group
+        DuplicatedGroup.Name = i
     
         RowIndex = RowIndex + 1
         
@@ -106,3 +116,4 @@ Sub CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal TargetGap
     OriginalText.Text.Story = Int(FinalNumber) + 1
     
 End Sub
+
