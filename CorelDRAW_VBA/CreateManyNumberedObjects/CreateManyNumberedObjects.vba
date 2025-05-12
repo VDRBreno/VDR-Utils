@@ -1,7 +1,5 @@
-'Necessário ter o objeto texto centralizado a um objeto de referencia e com alinhamento no centro
-Sub CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal TargetGapHorizontal As String, ByVal TargetGapVertical As String, ByVal TargetColumnsQuantity As String)
-    
-    ActiveDocument.Unit = cdrCentimeter
+'Para funcionar corretamente é necessário ter o objeto texto centralizado a um objeto de referencia e com alinhamento no centro
+Sub Call_Form_CreateManyNumberedObjects()
 
     'Verifica se o usuário não selecionou exatamente dois itens: um texto e um objeto
     If ActiveSelection.Shapes.Count <> 2 Then
@@ -22,6 +20,32 @@ Sub CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal TargetGap
     Else
         MsgBox "Selecione dois objetos, sendo um deles um texto!"
         Exit Sub
+    End If
+    
+    'Verifica se não é texto (contendo apenas números)
+    If Not IsNumeric(Text.Text.Story) Then
+        MsgBox "O objeto texto deve conter apenas números"
+        Exit Sub
+    End If
+
+    Call Form_CreateManyNumberedObjects.Show
+    
+End Sub
+
+Sub Main_CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal TargetGapHorizontal As String, ByVal TargetGapVertical As String, ByVal TargetColumnsQuantity As String)
+    
+    ActiveDocument.Unit = cdrCentimeter
+    
+    Dim Text As Shape
+    Dim Object As Shape
+    
+    'Atribui o texto e o objeto selecionados
+    If ActiveSelection.Shapes(1).Type = cdrTextShape Then
+        Set Text = ActiveSelection.Shapes(1)
+        Set Object = ActiveSelection.Shapes(2)
+    ElseIf ActiveSelection.Shapes(2).Type = cdrTextShape Then
+        Set Text = ActiveSelection.Shapes(2)
+        Set Object = ActiveSelection.Shapes(1)
     End If
     
     'Verifica se não é texto (contendo apenas números)
