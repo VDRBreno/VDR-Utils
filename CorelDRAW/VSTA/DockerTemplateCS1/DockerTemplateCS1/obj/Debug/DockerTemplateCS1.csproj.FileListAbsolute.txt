@@ -1,0 +1,16 @@
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\bin\Debug\DockerTemplateCS1\AppUI.xslt
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\bin\Debug\DockerTemplateCS1\UserUI.xslt
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\bin\Debug\DockerTemplateCS1\CorelDrw.addon
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\bin\Debug\DockerTemplateCS1\DockerTemplateCS1.dll
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\bin\Debug\DockerTemplateCS1\DockerTemplateCS1.pdb
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerTemplateCS1.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerUI.g.cs
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerTemplateCS1_MarkupCompile.cache
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerTemplateCS1_MarkupCompile.lref
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerUI.baml
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerTemplateCS1.g.resources
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerTemplateCS1.Properties.Resources.resources
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerTemplateCS1.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerTemplateCS1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerTemplateCS1.dll
+C:\Users\Admin\Downloads\CorelDrawVSTA-master\CorelDrawVSTA-master\DockerTemplateCS1\DockerTemplateCS1\obj\Debug\DockerTemplateCS1.pdb

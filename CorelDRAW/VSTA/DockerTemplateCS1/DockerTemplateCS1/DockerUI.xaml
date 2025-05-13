@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="DockerTemplateCS1.DockerUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DockerTemplateCS1"
+             mc:Ignorable="d" 
+             MinWidth="225">
+    <Grid Margin="5,5,5,5">
+        <StackPanel>
+            <ListBox Name="lbPresetsList" MaxHeight="110" SelectedIndex="0">
+                <ListBoxItem>Item 1</ListBoxItem>
+                <ListBoxItem>Item 2</ListBoxItem>
+                <ListBoxItem>Item 3</ListBoxItem>
+                <ListBoxItem>Item 4</ListBoxItem>
+                <ListBoxItem>Item 5</ListBoxItem>
+                <ListBoxItem>Item 6</ListBoxItem>
+                <ListBoxItem>Item 7</ListBoxItem>
+                <ListBoxItem>Item 8</ListBoxItem>
+                <ListBoxItem>Item 9</ListBoxItem>
+                <ListBoxItem>Item 10</ListBoxItem>
+            </ListBox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <CheckBox Content="White SubMark" Margin="0,7,0,0" IsChecked="True"></CheckBox>
+                    <DockPanel Margin="0,7,0,0" Height="auto">
+                        <TextBox Text="1" Width="40" PreviewTextInput="NumberValidationTextBox"></TextBox>
+                        <TextBlock Margin="5,0,0,0" Text="Offset"></TextBlock>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="Exclude edges" HorizontalAlignment="Center"></Label>
+                    <Grid Width="54" Height="54" HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <CheckBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True"></CheckBox>
+                        <CheckBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
+                        <CheckBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
+                        <CheckBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Separator Margin="0,10,0,0"></Separator>
+            <Button HorizontalAlignment="Right" Padding="15,2,15,2" Content="Make CropMark" Margin="0,10,0,0" Click="Button_Click"></Button>
+            <Separator Margin="0,10,0,0"></Separator>
+            <Expander Header="Custom Marks">
+                <StackPanel>
+                    <Grid Width="54" Height="54" HorizontalAlignment="Left">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <RadioButton Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                        <RadioButton Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                    </Grid>
+                </StackPanel>
+            </Expander>
+        </StackPanel>
+    </Grid>
+</UserControl>
