@@ -63,6 +63,7 @@ Sub Main_CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal Targ
     Dim GapHorizontal As Double
     Dim GapVertical As Double
     Dim ColumnQuantity As Long
+    Dim MinimumDigits As Long
     Dim InputValue As String
         
     If TargetFinalNumber = "" Or TargetGapHorizontal = "" Or TargetGapVertical = "" Or TargetColumnsQuantity = "" Then
@@ -82,6 +83,7 @@ Sub Main_CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal Targ
     GapHorizontal = CDbl(TargetGapHorizontal)
     GapVertical = CDbl(TargetGapVertical)
     ColumnQuantity = CDbl(TargetColumnsQuantity)
+    MinimumDigits = Len(Text.Text.Story)
     
     Dim xInitial As Double
     Dim yInitial As Double
@@ -100,6 +102,7 @@ Sub Main_CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal Targ
     For i = CurrentNumber To FinalNumber
         Dim PositionX As Double
         Dim PositionY As Double
+        Dim NewTextLabel As String
         
         PositionX = xInitial + RowIndex * ActiveDocument.ToUnits(GapHorizontal, cdrCentimeter) + (RowIndex + 1) * Object.SizeWidth
         PositionY = yInitial - ColumnIndex * ActiveDocument.ToUnits(GapVertical, cdrCentimeter) - (ColumnIndex + 1) * Object.SizeHeight
@@ -111,6 +114,7 @@ Sub Main_CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal Targ
         If Not i = CurrentNumber Then
             Call DuplicatedShapes.Ungroup
         End If
+        NewTextLabel = FormatWithZeros(i, MinimumDigits)
         
         DuplicatedShapes.PositionX = PositionX
         DuplicatedShapes.PositionY = PositionY
@@ -121,11 +125,12 @@ Sub Main_CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal Targ
         Else
             Set NewText = DuplicatedShapes.Shapes(2)
         End If
-        NewText.Text.Story = i
+        NewText.Text.Story = NewTextLabel
+        NewText.Name = NewTextLabel
         
         Dim DuplicatedGroup As Shape
         Set DuplicatedGroup = DuplicatedShapes.Group
-        DuplicatedGroup.Name = i
+        DuplicatedGroup.Name = NewTextLabel
     
         RowIndex = RowIndex + 1
         
@@ -137,7 +142,18 @@ Sub Main_CreateManyNumberedObjects(ByVal TargetFinalNumber As String, ByVal Targ
     
     Dim OriginalText As Shape
     Set OriginalText = ActivePage.FindShape(MainTextShapeName)
-    OriginalText.Text.Story = Int(FinalNumber) + 1
+    OriginalText.Text.Story = FormatWithZeros(Int(FinalNumber) + 1, MinimumDigits)
     
 End Sub
+
+Function FormatWithZeros(ByVal TargetValue As String, ByVal MinimumDigits As Long) As String
+    
+    If Len(TargetValue) >= MinimumDigits Then
+        FormatWithZeros = TargetValue
+        Exit Function
+    Else
+        FormatWithZeros = String(MinimumDigits - Len(TargetValue), "0") & TargetValue
+    End If
+
+End Function
 
